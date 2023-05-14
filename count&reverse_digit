@@ -12,3 +12,12 @@ def num_digit(n):
 
 print(reverse_digit(123))
 print(num_digit(123))
+
+""" below function combine 2 non-zero positive intergers, interchangeably. """
+def interleave(a,b):
+    if a<10:
+        return a*10 + b 
+    else:
+        return interleave(a//10, b//10)*100+interleave(a%10, b%10)
+        
+print(interleave(123,456))
